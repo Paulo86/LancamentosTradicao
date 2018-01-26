@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FB3B8A3-272E-42FD-9E0E-6969A9C20C4A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LancamentosWindowsForms</RootNamespace>
+    <AssemblyName>LancamentosWindowsForms</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\CategoriaLancamentoDAO.cs" />
+    <Compile Include="DAO\DBCore.cs" />
+    <Compile Include="DAO\DespesaDAO.cs" />
+    <Compile Include="DAO\EstabelecimentoDAO.cs" />
+    <Compile Include="DAO\EstoqueTransferenciaDAO.cs" />
+    <Compile Include="DAO\FornecedorDAO.cs" />
+    <Compile Include="DAO\InventarioDAO.cs" />
+    <Compile Include="DAO\LancamentoDAO.cs" />
+    <Compile Include="DAO\NotaFiscalDAO.cs" />
+    <Compile Include="DAO\ProdutoDAO.cs" />
+    <Compile Include="DAO\SubcategoriaLancamentoDAO.cs" />
+    <Compile Include="DAO\VendaConsolidadaDAO.cs" />
+    <Compile Include="Model\CategoriaLancamentoListModel.cs" />
+    <Compile Include="Model\CategoriaLancamentoModel.cs" />
+    <Compile Include="Model\DepartamentoProdutoListModel.cs" />
+    <Compile Include="Model\DepartamentoProdutoModel.cs" />
+    <Compile Include="Model\DespesaListModel.cs" />
+    <Compile Include="Model\DespesaModel.cs" />
+    <Compile Include="Model\EstabelecimentoListaModel.cs" />
+    <Compile Include="Model\EstabelecimentoModel.cs" />
+    <Compile Include="Model\EstoqueTransferenciaModel.cs" />
+    <Compile Include="Model\FornecedorListaModel.cs" />
+    <Compile Include="Model\FornecedorModel.cs" />
+    <Compile Include="Model\InventarioListaModel.cs" />
+    <Compile Include="Model\InventarioModel.cs" />
+    <Compile Include="Model\LancamentoListaModel.cs" />
+    <Compile Include="Model\LancamentoModel.cs" />
+    <Compile Include="Model\NotaFiscalListModel.cs" />
+    <Compile Include="Model\NotaFiscalModel.cs" />
+    <Compile Include="Model\ProdutoListModel.cs" />
+    <Compile Include="Model\ProdutoModel.cs" />
+    <Compile Include="Model\ProdutoNotaFiscalListModel.cs" />
+    <Compile Include="Model\ProdutoNotaFiscalModel.cs" />
+    <Compile Include="Model\SubcategoriaLancamentoListModel.cs" />
+    <Compile Include="Model\SubcategoriaLancamentoModel.cs" />
+    <Compile Include="Model\VendaConsolidadaListModel.cs" />
+    <Compile Include="Model\VendaConsolidadaModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VO\AcaoForm.cs" />
+    <Compile Include="VO\CategoriaLancamentoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\CategoriaLancamentoForm.Designer.cs">
+      <DependentUpon>CategoriaLancamentoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\CategoriaLancamentoPrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\CategoriaLancamentoPrincipalForm.Designer.cs">
+      <DependentUpon>CategoriaLancamentoPrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\InventarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\InventarioForm.Designer.cs">
+      <DependentUpon>InventarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\InventarioCadastroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\InventarioCadastroForm.Designer.cs">
+      <DependentUpon>InventarioCadastroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\EstoqueTransferenciaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\EstoqueTransferenciaForm.Designer.cs">
+      <DependentUpon>EstoqueTransferenciaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\EstoqueTransferenciaLancamentoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\EstoqueTransferenciaLancamentoForm.Designer.cs">
+      <DependentUpon>EstoqueTransferenciaLancamentoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\FornecedorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\FornecedorForm.Designer.cs">
+      <DependentUpon>FornecedorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\NotaFiscalLancamentoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\NotaFiscalLancamentoForm.Designer.cs">
+      <DependentUpon>NotaFiscalLancamentoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\DespesaBoletoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\DespesaBoletoForm.Designer.cs">
+      <DependentUpon>DespesaBoletoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\DespesasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\DespesasForm.Designer.cs">
+      <DependentUpon>DespesasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\DespesasLancamentoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\DespesasLancamentoForm.Designer.cs">
+      <DependentUpon>DespesasLancamentoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\FornecedorPrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\FornecedorPrincipalForm.Designer.cs">
+      <DependentUpon>FornecedorPrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\BoletosLancamentoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\BoletosLancamentoForm.Designer.cs">
+      <DependentUpon>BoletosLancamentoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\BoletosLiquidarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\BoletosLiquidarForm.Designer.cs">
+      <DependentUpon>BoletosLiquidarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\BoletosLiquidarLoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\BoletosLiquidarLoteForm.Designer.cs">
+      <DependentUpon>BoletosLiquidarLoteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\Mensagens.cs" />
+    <Compile Include="VO\BoletosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\BoletosForm.Designer.cs">
+      <DependentUpon>BoletosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\NotasFiscaisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\NotasFiscaisForm.Designer.cs">
+      <DependentUpon>NotasFiscaisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\PrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\PrincipalForm.Designer.cs">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\ProdutoDataGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\ProdutoDataGridForm.Designer.cs">
+      <DependentUpon>ProdutoDataGridForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\ProdutoLancamentoNotaFiscalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\ProdutoLancamentoNotaFiscalForm.Designer.cs">
+      <DependentUpon>ProdutoLancamentoNotaFiscalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\ProdutosNotaFiscalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\ProdutosNotaFiscalForm.Designer.cs">
+      <DependentUpon>ProdutosNotaFiscalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\SubcategoriaLancamentoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\SubcategoriaLancamentoForm.Designer.cs">
+      <DependentUpon>SubcategoriaLancamentoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\SubcategoriaLancamentoPrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\SubcategoriaLancamentoPrincipalForm.Designer.cs">
+      <DependentUpon>SubcategoriaLancamentoPrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\VendaDiariaConsolidadaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\VendaDiariaConsolidadaForm.Designer.cs">
+      <DependentUpon>VendaDiariaConsolidadaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\VendaDiariaConsolidadaLancamentoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VO\VendaDiariaConsolidadaLancamentoForm.Designer.cs">
+      <DependentUpon>VendaDiariaConsolidadaLancamentoForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="VO\CategoriaLancamentoForm.resx">
+      <DependentUpon>CategoriaLancamentoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\CategoriaLancamentoPrincipalForm.resx">
+      <DependentUpon>CategoriaLancamentoPrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\InventarioForm.resx">
+      <DependentUpon>InventarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\InventarioCadastroForm.resx">
+      <DependentUpon>InventarioCadastroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\EstoqueTransferenciaForm.resx">
+      <DependentUpon>EstoqueTransferenciaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\EstoqueTransferenciaLancamentoForm.resx">
+      <DependentUpon>EstoqueTransferenciaLancamentoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\FornecedorForm.resx">
+      <DependentUpon>FornecedorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\NotaFiscalLancamentoForm.resx">
+      <DependentUpon>NotaFiscalLancamentoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\DespesaBoletoForm.resx">
+      <DependentUpon>DespesaBoletoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\DespesasForm.resx">
+      <DependentUpon>DespesasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\DespesasLancamentoForm.resx">
+      <DependentUpon>DespesasLancamentoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\FornecedorPrincipalForm.resx">
+      <DependentUpon>FornecedorPrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\BoletosLancamentoForm.resx">
+      <DependentUpon>BoletosLancamentoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\BoletosLiquidarForm.resx">
+      <DependentUpon>BoletosLiquidarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\BoletosLiquidarLoteForm.resx">
+      <DependentUpon>BoletosLiquidarLoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\BoletosForm.resx">
+      <DependentUpon>BoletosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\NotasFiscaisForm.resx">
+      <DependentUpon>NotasFiscaisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\PrincipalForm.resx">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\ProdutoDataGridForm.resx">
+      <DependentUpon>ProdutoDataGridForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\ProdutoLancamentoNotaFiscalForm.resx">
+      <DependentUpon>ProdutoLancamentoNotaFiscalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\ProdutosNotaFiscalForm.resx">
+      <DependentUpon>ProdutosNotaFiscalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\SubcategoriaLancamentoForm.resx">
+      <DependentUpon>SubcategoriaLancamentoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\SubcategoriaLancamentoPrincipalForm.resx">
+      <DependentUpon>SubcategoriaLancamentoPrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\VendaDiariaConsolidadaForm.resx">
+      <DependentUpon>VendaDiariaConsolidadaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VO\VendaDiariaConsolidadaLancamentoForm.resx">
+      <DependentUpon>VendaDiariaConsolidadaLancamentoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
